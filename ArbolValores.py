@@ -1,19 +1,19 @@
-# ===========================================
-# By: Nury Farelo - Estructuras Datos
-# Name: Taller 1 - Árboles - Parejas
-# ===========================================
-#Fecha 15/04/2025
-#Estudiantes:
-#Kevin David Basto Quintero 2222974
-#Andres Santiago Culman Sanchez 2241929
+    # ===========================================
+    # By: Nury Farelo - Estructuras Datos
+    # Name: Taller 1 - Árboles - Parejas
+    # ===========================================
+    #Fecha 15/04/2025
+    #Estudiantes:
+    #Kevin David Basto Quintero 2222974
+    #Andres Santiago Culman Sanchez 2241929
 
 import bigtree
 from bigtree import Node, print_tree
 
-#Raíz del arbol
+    #Raíz del arbol
 posicionCamion = Node("raiz", distancia = 0, string = "Calle 32 #28-46")
 
-#Nodos hijos
+    #Nodos hijos
 direccion1 = Node("banco1", distancia = 2, string = "Calle 33 #29-68", parent = posicionCamion)
 direccion2 = Node("banco2", distancia = 3, string = "Carrera 25 #32-72", parent = posicionCamion)
 direccion3 = Node("cajeros1", distancia = 2, string = "Carrera 31 #32-31", parent = posicionCamion)
@@ -42,7 +42,7 @@ def contarElementos(raiz):
         print(f"el nodo {raiz.name} no tiene hijos")
         return contador
     hijos = raiz.children
-    for i in range(len(hijos) - 1):
+    for i in range(len(hijos)):
         contador += 1
     return contador
 
@@ -61,8 +61,8 @@ def rutaDireccion(raiz, nodo):
 
 def buscarDireccion(raiz, stringDireccion):
     descendientes = list(raiz.descendants)
-    for i in range(len(descendientes)- 1):
-        if descendientes[i].string == stringDireccion:
+    for descendiente in descendientes:
+        if descendiente.string == stringDireccion:
             return True
     print(f"No se encuentra {stringDireccion} en el mapa de direcciones que debe recorrer el camion")
     return False
