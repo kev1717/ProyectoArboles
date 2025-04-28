@@ -38,7 +38,7 @@ def calcularPadre(raiz):
 
 def contarElementos(raiz):
     contador = 1
-    if raiz.children == False:
+    if not raiz.children:
         print(f"el nodo {raiz.name} no tiene hijos")
         return contador
     hijos = raiz.children
