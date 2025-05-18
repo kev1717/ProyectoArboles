@@ -18,7 +18,7 @@ direccion1 = Node("banco1", distancia = 2, string = "Calle 33 #29-68", parent = 
 direccion2 = Node("banco2", distancia = 3, string = "Carrera 25 #32-72", parent = posicionCamion)
 direccion3 = Node("cajeros1", distancia = 2, string = "Carrera 31 #32-31", parent = posicionCamion)
 direccion4 = Node("cajeros2", distancia = 5, string = "Carrera 27 #28-83", parent = posicionCamion)
-dreccion5 = Node("banco3", distancia = 7, string = "Carrera 25 #37-12", parent = posicionCamion)
+direccion5 = Node("banco3", distancia = 7, string = "Carrera 25 #37-12", parent = posicionCamion)
 
 def calcularPadre(raiz):
     hijos = raiz.children
